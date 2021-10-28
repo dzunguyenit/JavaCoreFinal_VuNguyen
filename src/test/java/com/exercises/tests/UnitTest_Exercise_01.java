@@ -55,4 +55,16 @@ public class UnitTest_Exercise_01 {
         student.setLt(10);
         Assertions.assertNotEquals(6.40, student.getFinalPoint());
     }
+
+    @Test
+    @DisplayName("Check hàm Liệt kê danh sách 10 sinh viên có điểm tổng kết thấp nhất")
+    public void checkListTenAscending() {
+        List<Student> listStudent = ReadFileCsv.getListStudents();
+        List<Student> listFinalPointAscending = Exercise_01.getListMinFinalPoint(listStudent);
+        for (int i = 0; i < listFinalPointAscending.size() - 1; i++) {
+            Assertions.assertTrue(listFinalPointAscending.get(i).getFinalPoint() <= listFinalPointAscending.get(i + 1).getFinalPoint());
+        }
+    }
+
+
 }
