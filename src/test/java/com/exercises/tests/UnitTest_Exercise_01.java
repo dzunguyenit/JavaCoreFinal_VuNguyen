@@ -33,4 +33,26 @@ public class UnitTest_Exercise_01 {
         }
 
     }
+
+    @Test
+    @DisplayName("Check hàm tính điểm tổng kết")
+    public void checkShouleBeEqualFuctionCalculateFinalPoint() {
+        Student student = new Student();
+        student.setBonus(5);
+        student.setReport(6);
+        student.setApp(7);
+        student.setLt(8);
+        Assertions.assertEquals(6.45, student.getFinalPoint());
+    }
+
+    @Test
+    @DisplayName("Check hàm tính điểm tổng kết không bằng giá trị của hàm")
+    public void checkShouleNotEqualFuctionCalculateFinalPoint() {
+        Student student = new Student();
+        student.setBonus(5);
+        student.setReport(6);
+        student.setApp(7);
+        student.setLt(10);
+        Assertions.assertNotEquals(6.40, student.getFinalPoint());
+    }
 }
