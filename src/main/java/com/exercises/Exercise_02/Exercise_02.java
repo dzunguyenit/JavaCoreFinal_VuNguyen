@@ -45,6 +45,7 @@ public class Exercise_02 {
                 dos.writeDouble(sv.getReport());
                 dos.writeDouble(sv.getApp());
                 dos.writeDouble(sv.getLt());
+                dos.writeDouble(sv.getFinalPoint());
             }
             dos.flush();
             dos.close();
@@ -66,7 +67,8 @@ public class Exercise_02 {
                 double report = dataInput.readDouble();
                 double app = dataInput.readDouble();
                 double lt = dataInput.readDouble();
-                Student listStudentOutlook = new Student(Id, name, email, bonus, report, app, lt);
+                double finalPoint = dataInput.readDouble();
+                Student listStudentOutlook = new Student(Id, name, email, bonus, report, app, lt, finalPoint);
                 System.out.println(listStudentOutlook);
             }
             dataInput.close();
