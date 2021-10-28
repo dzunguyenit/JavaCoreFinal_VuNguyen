@@ -86,7 +86,7 @@ public class Exercise_01 {
                 }
             }
         }
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 0; i < 10; i++) {
             listTopTenLT.add(listStudents.get(i));
         }
         return listTopTenLT;
@@ -105,7 +105,7 @@ public class Exercise_01 {
                 }
             }
         }
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 0; i < 10; i++) {
             listFinalPointAscending.add(listStudent.get(i));
         }
         return listFinalPointAscending;
