@@ -23,7 +23,6 @@ public class Exercise_01 {
 
         // Câu 4
 
-
         // Set finalPoint
         for (Student student : listStudent) {
             student.setFinalPoint(student.getFinalPoint());
