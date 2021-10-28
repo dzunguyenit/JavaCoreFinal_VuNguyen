@@ -83,4 +83,16 @@ public class Exercise_02 {
         return (matcher.find()) ? true : false;
     }
 
+    public static boolean matchEmailOutlook(String text) {
+        Pattern pattern = Pattern.compile("\\b[a-zA-Z][\\w\\-\\.]{0,63}\\@outlook.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?\\b");
+        Matcher matcher = pattern.matcher(text);
+        return (matcher.find()) ? true : false;
+    }
+
+    public static boolean matchEmailGmailOrOutlook(String text) {
+        Pattern pattern = Pattern.compile("\\b[a-zA-Z][\\w\\-\\.]{0,63}\\@(gmail|outlook).[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?\\b");
+        Matcher matcher = pattern.matcher(text);
+        return (matcher.find()) ? true : false;
+    }
+
 }
