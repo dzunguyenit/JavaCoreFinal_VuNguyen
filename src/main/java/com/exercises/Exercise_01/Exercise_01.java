@@ -11,9 +11,11 @@ import java.util.List;
 
 public class Exercise_01 {
     public static void main(String[] args) {
-        // Câu 1
+        // 1. Đọc danh sách sinh viên từ tập tin data.csv được cung cấp
         List<Student> listStudent = ReadFileCsv.getListStudents();
 
+        System.out.println("=============================================================");
+        System.out.println("2. Liệt kê danh sách 10 sinh viên có điểm thi lý thuyết cao nhất");
         // Câu 2
         List<Student> listTopTenLT = getListTopTenLtStudent(listStudent);
         for (Student student : listTopTenLT) {
@@ -27,21 +29,22 @@ public class Exercise_01 {
         for (Student student : listStudent) {
             student.setFinalPoint(student.getFinalPoint());
         }
-
-        //3. Tính điểm tổng kết cho từng sinh viên theo công thức: bonus 10%,
-        //report 30%, app 15%, lý thuyết 45%; điểm tổng kết được làm tròn đến
-        //0.5 (ví dụ: 7.37 -> 7.5, 6.2 -> 6.0)
+        System.out.println("=============================================================");
+        System.out.println("3. Tính điểm tổng kết cho từng sinh viên theo công thức: bonus 10%,\n" +
+                "report 30%, app 15%, lý thuyết 45%; điểm tổng kết được làm tròn đến\n" +
+                "0.5 (ví dụ: 7.37 -> 7.5, 6.2 -> 6.0)");
         for (Student student : listStudent) {
             System.out.println(student);
         }
 
-        System.out.println("3. Calculate final points for all list students");
-        for (int i = 0; i < listStudent.size(); i++) {
-            System.out.println(listStudent.get(i));
-        }
+//        System.out.println("3. Calculate final points for all list students");
+//        for (int i = 0; i < listStudent.size(); i++) {
+//            System.out.println(listStudent.get(i));
+//        }
 
 //4. Liệt kê danh sách 10 sinh viên có điểm tổng kết thấp nhất lên giao diện
 //console
+        System.out.println("=============================================================");
         System.out.println("4.  Liệt kê danh sách 10 sinh viên có điểm tổng kết thấp nhất lên giao diện");
         List<Student> listFinalPointAscending = getListMinFinalPoint(listStudent);
         for (int i = 0; i < listStudent.size(); i++) {
