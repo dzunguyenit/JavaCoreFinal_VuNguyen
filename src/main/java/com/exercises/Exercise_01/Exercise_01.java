@@ -47,8 +47,8 @@ public class Exercise_01 {
         System.out.println("=============================================================");
         System.out.println("4.  Liệt kê danh sách 10 sinh viên có điểm tổng kết thấp nhất lên giao diện");
         List<Student> listFinalPointAscending = getListMinFinalPoint(listStudent);
-        for (int i = 0; i < listStudent.size(); i++) {
-            System.out.println(listStudent.get(i));
+        for (int i = 0; i < listFinalPointAscending.size(); i++) {
+            System.out.println(listFinalPointAscending.get(i));
         }
 
 //5.
